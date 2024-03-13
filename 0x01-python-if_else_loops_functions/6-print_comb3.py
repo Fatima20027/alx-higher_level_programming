@@ -7,4 +7,3 @@ for o in range(0, 9):
             end = ", "
         if o < i:
             print("{o}{i}".format(o=o, i=i), end=end)
-
