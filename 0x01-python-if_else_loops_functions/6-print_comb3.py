@@ -7,4 +7,3 @@ for j in range(0, 9):
             end = ", "
         if j < i:
             print("{j}{i}".format(j=j, i=i), end=end)
-
