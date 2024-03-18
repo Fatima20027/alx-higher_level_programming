@@ -7,4 +7,3 @@ def multiple_returns(sentence):
         else:
                 tuple = length, sentence[0]
         return tuple 
-       
