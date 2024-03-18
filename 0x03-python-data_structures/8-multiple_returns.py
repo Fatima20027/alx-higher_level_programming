@@ -6,4 +6,5 @@ def multiple_returns(sentence):
                 tuple = 0, None
         else:
                 tuple = length, sentence[0]
-        return tuple        
+        return tuple 
+       
