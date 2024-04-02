@@ -2,5 +2,5 @@
 class Square:
     pass
 
-p = Square()
-print(p)
+#p = Square()
+#print(p)
