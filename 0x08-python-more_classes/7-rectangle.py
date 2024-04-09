@@ -76,7 +76,7 @@ class Rectangle:
                 for j in range(self.__height)]))
 
     def __repr__(self):
-        return f'{self.print_symbol}({self.width}, {self.height})'
+        return f'Rectangle({self.width}, {self.height})'
 
     def __del__(self):
         """Print the message when an instance of Rectangle is deleted
