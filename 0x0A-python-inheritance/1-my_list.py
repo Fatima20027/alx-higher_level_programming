@@ -2,7 +2,7 @@
 """class MyList that inherits from list"""
 
 
-class Mylist(list):
+class MyList(list):
     ''' Represents a MyList
     '''
 
