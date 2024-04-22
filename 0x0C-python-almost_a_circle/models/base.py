@@ -67,10 +67,16 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        """load from file"""
-        filename = cls.__name__ + ".json"
+        """
+        Loads a list of objects from a file in JSON format.
+
+        Returns:
+            list: The list of objects.
+        """
+        filename = "{}.json".format(cls.__name__)
+
         try:
-            with open(filename, 'r') as jsonfile:
+            with open(filename, "r") as jsonfile:
                 list_dicts = Base.from_json_string(jsonfile.read())
                 return [cls.create(**d) for d in list_dicts]
         except IOError:
