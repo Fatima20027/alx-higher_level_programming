@@ -109,7 +109,11 @@ class Rectangle(Base):
             print(" " * self.__x + "#" * self.__width)
 
     def __str__(self):
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+        '''
+            Overwritting the str method
+        '''
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y,
+                                                       self.width, self.height)
 
     def update(self, *args, **kwargs):
         '''
@@ -131,4 +135,4 @@ class Rectangle(Base):
                 'y': getattr(self, "y"),
                 'width': getattr(self, "width"),
                 'height': getattr(self, "height"),
-                'id': getattr(self, "id"),}
+                'id': getattr(self, "id")}
