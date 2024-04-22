@@ -1,10 +1,23 @@
 #!/usr/bin/python3
 
+"""Defines a base model class."""
 import json
 
+
 class Base:
+    """Represent the base model.
+    Represents the "base" for all other classes in project 0x0C*.
+    Attributes:
+        __nb_objects (int): The number of instantiated Bases.
+    """
+
     __nb_objects = 0
+
     def __init__(self, id=None):
+        """Initialize a new Base.
+        Args:
+            id (int): The identity of the new Base.
+        """
         if id is not None:
             self.id = id
         else:
@@ -13,12 +26,13 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
+        """list to json"""
         if list_dictionaries is None or "":
             return "[]"
         else:
             return json.dumps(list_dictionaries)
 
-    @classmethod   
+    @classmethod
     def save_to_file(cls, list_objs):
         """save to json file"""
         filename = cls.__name__ + ".json"
@@ -51,9 +65,9 @@ class Base:
             new.update(**dictionary)
             return new
 
-
     @classmethod
     def load_from_file(cls):
+        """load from file"""
         filename = cls.__name__ + ".json"
         try:
             with open(filename, 'r') as jsonfile:
