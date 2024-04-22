@@ -127,8 +127,8 @@ class Rectangle(Base):
         '''
             Returns a dictionary representation of this class
         '''
-        return {'id': getattr(self, "id"),
+        return {'x': getattr(self, "x"),
+                'y': getattr(self, "y"),
                 'width': getattr(self, "width"),
                 'height': getattr(self, "height"),
-                'x': getattr(self, "x"),
-                'y': getattr(self, "y"),}
+                'id': getattr(self, "id"),}
