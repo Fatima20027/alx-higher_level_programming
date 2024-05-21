@@ -3,3 +3,4 @@ CREATE TABLE IF NOT EXISTS first_tabe (
 	id INT,
 	name VARCHAR(256)
 );
+
