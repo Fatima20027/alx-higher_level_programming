@@ -5,7 +5,7 @@ module.exports = class Rectangle {
   constructor (w, h) {
     // creates an empty object if w or h is equal to 0 or not a positive integer
     if (!(w > 0 && h > 0)) {
-      return {};
+      return;
     } else {
       this.width = w;
       this.height = h;
