@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const parentSquare = require('./5-rectangle');
+const parentSquare = require('./5-square');
 
 module.exports = class Square extends parentSquare {
   charPrint (c) {
