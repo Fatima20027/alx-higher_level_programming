@@ -21,8 +21,8 @@ if __name__ == "__main__":
     state_name = sys.argv[4]
 
     cur = db.cursor()
-    cur.execute("SELECT * FROM states WHERE name = (%s)\
-    ORDER BY states.id ASC", (state_name,))
+    query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
+    cur.execute(query, (state_name,))
     table = cur.fetchall()
 
     for row in table:
